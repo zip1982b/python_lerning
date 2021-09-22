@@ -28,16 +28,18 @@ if __name__ == '__main__':
     print(f'scores = {scores}')
     m = min(scores)
     print(f'minimum score = {m}')
-    for h in scores:
-        print(f'h = {h}')
-        if h == m:
-            print(f'delete {h}')
-            scores.remove(h)
-    print(f'scores = {scores}')
 
-    second_lowest = min(scores)
+    new_scores = [h for h in scores if h!=m]
+    print(f'new scores = {new_scores}')
+    second_lowest = min(new_scores)
     print(f'second lowest = {second_lowest}')
     for_print = [t[0] for t in students if t[1] == second_lowest]
     print(for_print)
 
+
+'''
+for h in scores:
+    if h == m:
+        scores.remove(h)
+'''
 
